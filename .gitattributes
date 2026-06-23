@@ -13,3 +13,9 @@ README.md export-ignore
 .gitignore export-ignore
 .gitattributes export-ignore
 .releaserc export-ignore
+# file formats not permitted on the Factorio mod portal
+*.py export-ignore
+*.exe export-ignore
+*.bat export-ignore
+*.ps1 export-ignore
+*.sh export-ignore
