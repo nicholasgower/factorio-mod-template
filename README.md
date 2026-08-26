@@ -48,6 +48,14 @@ The API key needs `Upload Mods`, `Publish Mods` and `Edit Mods` permissions. Cop
 
 Now you need to go to your repository settings > `Secrets and variables` > `Actions` and add a new Repository secret called `FACTORIO_TOKEN` with your copied key as the secret.
 
+### Running release actions locally
+
+It is possible to run Github Actions fully locally with [act](https://nektosact.com/installation/index.html), enabling the creation of new releases without a reliance on Github Actions servers. This template includes the shell script `run_actions_locally.sh` to assist in this process. To run this script, you must add a `.env` file to the repo containing an API key in the following format:
+```bash
+export FACTORIO_TOKEN={TOKEN}
+```
+`.env` is set to be ignored in `.gitignore`, and it's important that .env is never tracked by Git, as doing so risks leaking your API key.
+
 ## Mod setup
 
 - Swap out the [`LICENSE`](LICENSE) to your own liking _**(especially change out my name for yours)**_
